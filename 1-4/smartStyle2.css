@@ -1,0 +1,55 @@
+/* タブレットサイズ */
+@media all and (max-width: 767px) {
+
+    body {
+        width: 300px;
+    }
+    .left {
+        width: 100px;
+    }
+    .main-left-top {
+        width: 125px;
+    }
+    .main-left-bottom {
+        width: 125px;
+    }
+    .main-right {
+        width: 75px;
+    }
+    .main-bottom {
+        width: 200px;
+    }
+    .footer {
+        width: 300px;
+    }
+}
+
+/* スマートフォンサイズ */
+@media all and (max-width: 429px) {
+    
+    * {
+        float: none;
+    }
+
+    body {
+        width: 150px;
+    }
+    .left {
+        width: 150px;
+    }
+    .main-left-top {
+        width: 150px;
+    }
+    .main-left-bottom {
+        width: 150px;
+    }
+    .main-right {
+        width: 150px;
+    }
+    .main-bottom {
+        width: 150px;
+    }
+    .footer {
+        width: 150px;
+    }
+}
