@@ -1,0 +1,38 @@
+IT Infomation Tecnology の略称。直訳すると「情報技術」。
+ICT Infomation and Communication Tecnology の略称。近年になって情報技術の中にコミュニケーションの要素が増えてきたために現在ではこう表記されることも多い
+IoT Internet of Things モノのインターネット。家電などがインターネットにつながっていること、またその様を表している。
+OS Operation System の略称。PCにおけるマウス操作など基本動作を行うためのソフトウェア
+Windows OSの一種。Microsoft社の開発したOS、世界的に幅広く使われている。
+MacOS OSの一種。Apple社の開発したOS
+UNIX OSの一種。Linux等の派生元となったOS
+Linux OSの一種。サーバー運用に用いられることの多いOS。
+マークアップ データ内に特定の記法を用いて何らかの情報を埋め込んだもの。
+フロントエンド 内部と外部とで、直接的にやり取りを行う部分
+HTML マークアップ言語。Webサイト作成などに用いられる。
+CSS スタイルシート言語。HTML等を装飾するために用いられる。
+JavaScript オブジェクト指向のスクリプト言語。HTML等を装飾することができる。
+サーバーサイド サーバー側で動作するモノ
+.NET .NET Framework が存在する環境であれば機種、OSに限らずに同じように動作させることが可能
+Java オブジェクト指向の言語。OSの違いによる動作の違いが起きない
+Java SE Standerd Edition、Javaの基本的機能がまとめられたもの
+Java EE Enterprise Edition、SEに追加でサーバーサイドの機能が入ったもの
+Perl テキストの処理にたけたプログラミング言語
+PHP HTMLに埋め込み使用するスクリプト型の言語
+Ruby Ruby on Railsというフレームワークを用いてアプリケーションを開発できる。
+Apache 世界で最も普及しているWebサーバーソフトウェアの一種。
+nginx Webサーバーソフトウェアの１つ。同時に多数の接続を処理できるのが特徴。
+IIS MicroSoft社のサーバ向けOS。世界的に広く普及している。
+SQL Structured Query Language RDB:Relational Databaseの管理や操作を行うための問い合わせの言語の１つ
+DB2 IBM社のRDB。幅広いプラットフォームに対応しており、基幹システムとして利用されている。
+MySQL 人気の高いSQLの一つ。現在はオラクル社が開発にかかわっている。
+MatiaDB MySQLから派生したもの。
+OracleDB オラクル社の開発、販売しているSQL。
+PostgreSQL 
+
+CRUD Create,Read,Updata,Deleteの頭文字をとったもの。全てのコンピュータの基本動作となっている。
+トランザクション 互いに依存、関連する複数の処理を一つにまとめること。
+コミット トランザクションしたことによって出力された結果。
+ロールバック 何か不具合等の障害が発生したときに発生前の状態へと戻すこと。
+フロントサイドエンジニア フロントサイド、情報の入出力される部分のエンジニア
+バックエンドエンジニア Web系において、開発からデータベースまで広く担当するエンジニア
+Character-based User Interface コンピューターやソフトウェアが利用者と文字によってやり取りを行う方式
