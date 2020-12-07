@@ -1,0 +1,19 @@
+package study;
+
+import java.util.Date;
+import java.util.Calendar;
+
+public class Study{
+
+    public static void main(String[] args){
+        Date now = new Date();
+        System.out.println(now);
+        
+        Calendar cal = Calendar.getInstance();
+        System.out.println(cal.getTime());
+        
+        System.out.println(cal.get(Calendar.YEAR));
+        System.out.println(cal.get(Calendar.MONTH) + 1);
+        System.out.println(cal.get(Calendar.DATE));
+    }
+}

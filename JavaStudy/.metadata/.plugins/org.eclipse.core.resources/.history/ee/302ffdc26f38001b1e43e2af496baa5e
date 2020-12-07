@@ -1,0 +1,20 @@
+package check;
+import constants;
+
+public class Check {
+
+	private String firstName = "Sakai";
+	private String lastName = "Yuu";
+	
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		// 課題① フィールド変数の宣言と初期化
+		
+		printName(firstName, lastName);
+	}
+	
+	private void printName(String firstName, String lastName) {
+		System.out.println(firstName + lastName);
+	}
+
+}

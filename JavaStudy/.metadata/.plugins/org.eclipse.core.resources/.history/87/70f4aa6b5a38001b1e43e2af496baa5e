@@ -1,0 +1,23 @@
+package List;
+
+import java.util.Set;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		ArrayList<String> array = new ArrayList<String> ();
+		
+		array.add("1");
+		array.add("2");
+		array.add("3");
+		
+		for(String num: array) {
+			System.out.println(num);
+		}
+		
+	}
+
+}

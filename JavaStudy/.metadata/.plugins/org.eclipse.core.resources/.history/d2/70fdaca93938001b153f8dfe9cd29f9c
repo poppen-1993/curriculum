@@ -1,0 +1,15 @@
+package study;
+
+public class TestStatic {
+	int num1 = 0;
+	static int num2 = 0;
+	
+	public void numPlus() {
+		num1++;
+		num2++;
+		
+		System.out.println("static–³‚µ:" );
+		System.out.println("static—L‚èF");
+	}
+
+}
