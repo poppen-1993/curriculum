@@ -30,6 +30,7 @@
     <fullyQualifiedTypeName name="check.Check"/>
     <fullyQualifiedTypeName name="check.Pet"/>
     <fullyQualifiedTypeName name="check.RobotPet"/>
+    <fullyQualifiedTypeName name="study.Calculator"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="constants.Constants"/>
 </qualifiedTypeNameHistroy>
