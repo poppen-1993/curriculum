@@ -1,0 +1,40 @@
+@media screen and (max-width: 479px) {
+    * {
+        float: none;
+    }
+    
+    .header {
+        width: 200px;
+        height: 200px;
+        float: none;
+    }
+
+    .heads-list {
+        width: 60px;
+        height: 160px;
+        margin: 20px 70px;
+    }
+
+    .contents {
+        width: 200px;
+        height: 310px;
+    }
+
+    .contents-list {
+        margin: 20px 30px;
+    }
+
+    .left {
+        width: 200px;
+        height: 100px;
+    }
+
+    .right {
+        width: 200px;
+        height: 210px;
+    }
+
+    .footer {
+        width: 200px;
+    }
+}
