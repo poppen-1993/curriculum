@@ -1,9 +1,0 @@
-INDEX VERSION 1.131+C:\LetsEngineer\curriculum\JavaStudy\.metadata\.plugins\org.eclipse.jdt.core
-1759547790.index
-411723009.index
-4135846957.index
-1361086807.index
-1871533463.index
-4058628148.index
-1289320443.index
-2263806114.index

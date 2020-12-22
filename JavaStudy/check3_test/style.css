@@ -1,0 +1,52 @@
+/* .header {
+    width: 100%;
+    height: 60px;
+    background-color: gray;
+} */
+
+.header {
+    background: gray;
+    height: 40px;
+    position: relative;
+  }
+
+.title {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.data {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    font-size: 10px;
+}
+
+.contents {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.key {
+    width: 80px;
+    text-align: center;
+    float: left;
+}
+
+.input {
+}
+
+.footer {
+    background: gray;
+    height: 50px;
+    position: relative;
+}
+
+.logo {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
