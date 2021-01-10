@@ -61,8 +61,7 @@ public class ExException {
 					// 問①: 強制的に「NullPointerException」を発生させるメソッドを作成し、呼び出しなさい。
 					// 問①は最下部にもあります。
 					// ルール: ここへ作成したメソッドを呼び出す
-					String nullpo = null;
-					System.out.println(nullpo.length());
+					NPE();
 					break;
 				case CONST_EXCEPTION_TRIGER_ARRAY_OUT_OF_BOUNDS:
 					// 問②: 「throw」を使用せずに「ArrayIndexOutOfBoundsException」を発生させる処理を記述しなさい。
@@ -109,6 +108,11 @@ public class ExException {
 	 * ルール2: 例外発生時に設定するメッセージは、定義済みの定数から適当なものを指定してください。
 	 */
 	// ここへ記述
+	private static void NPE() {
+		String nullpo = null;
+		System.out.println(nullpo.length());
+	}
+	// ここまで記述
 	/**
 	 * 例外処理のメッセージを出力
 	 *
