@@ -2,72 +2,60 @@ package project;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        Connection connection = null;
-        Statement statement = null;
-        ResultSet resultSet = null;
+	/* 定数 */
+	/** ドライバーのクラス名 */
+	private static final String POSTGRES_DRIVER = "org.postgresql.Driver";
+	/** ・JDMC接続先情報 */
+	private static final String JDBC_CONNECTION = "jdbc:postgresql://localhost:5432/lesson_db";
+	/** ・ユーザー名 */
+	private static final String USER = "postgres";
+	/** ・パスワード */
+	private static final String PASS = "1342727";
 
-        try {
-            //-----------------
-            // 接続
-            //-----------------
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/sampleDatabase", // "jdbc:postgresql://[場所(Domain)]:[ポート番号]/[DB名]"
-                    "postgres", // ログインロール
-                    "test"); // パスワード
-            statement = connection.createStatement();
+	public static void main(String[] args) {
 
-            //-----------------
-            // SQLの発行
-            //-----------------
-            //ユーザー情報のテーブル
-            resultSet = statement.executeQuery("SELECT * FROM pg_shadow");
+		Connection connection = null;
+		Statement statement = null;
 
-            //-----------------
-            // 値の取得
-            //-----------------
-            // フィールド一覧を取得
-            List<String> fields = new ArrayList<String>();
-            ResultSetMetaData rsmd = resultSet.getMetaData();
-            for (int i = 1; i <= rsmd.getColumnCount(); i++) {
-                fields.add(rsmd.getColumnName(i));
-            }
+		try {
+			Class.forName(POSTGRES_DRIVER);
+			connection = DriverManager.getConnection(JDBC_CONNECTION,USER,PASS);
+			statement = connection.createStatement();
 
-            //結果の出力
-            int rowCount = 0;
-            while (resultSet.next()) {
-                rowCount++;
+			String SQL = "INSERT INTO tb_shohin(SHOHIN_ID, SHOHIN_NAME, TANKA) VALUES( ?, ?, ?) ";
+			PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-                System.out.println("---------------------------------------------------");
-                System.out.println("--- Rows:" + rowCount);
-                System.out.println("---------------------------------------------------");
+			for (int i = 23; i < 30; i++) {
+			 preparedStatement.setInt(1, 0 + i);
+			 preparedStatement.setString(2, "SHOHIN" + i);
+			 preparedStatement.setInt(3, i + 00);
+			 preparedStatement.executeUpdate();
+			}
 
-                //値は、「resultSet.getString(<フィールド名>)」で取得する。
-                for (String field : fields) {
-                    System.out.println(field + ":" + resultSet.getString(field));
-                }
-            }
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 
+		} catch (SQLException e) {
+			e.printStackTrace();
 
-        } finally {
-            //接続を切断する
-            if (resultSet != null) {
-                resultSet.close();
-            }
-            if (statement != null) {
-                statement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
-        }
-    }
+		} finally {
+			try {
+				if (statement != null) {
+					statement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
 
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 }
