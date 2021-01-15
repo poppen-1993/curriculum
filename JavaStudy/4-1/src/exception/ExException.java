@@ -85,7 +85,7 @@ public class ExException {
 				}
 
 			} catch (NullPointerException e) {
-				System.out.println(e + ": "+ CONST_MSG_NULLPO);
+				System.out.println(e);
 			} catch (ArrayIndexOutOfBoundsException e) {
 				System.out.println(e);
 				// 問③: クラスキャストの例外をキャッチしなさい。
@@ -108,9 +108,11 @@ public class ExException {
 	 * ルール2: 例外発生時に設定するメッセージは、定義済みの定数から適当なものを指定してください。
 	 */
 	// ここへ記述
-	private static void NPE() {
+	private static void NPE() throws NullPointerException{
 		String nullpo = null;
-		System.out.println(nullpo.length());
+	    if(nullpo == null) {
+	        throw new NullPointerException(CONST_MSG_NULLPO);
+	    }
 	}
 	// ここまで記述
 	/**
