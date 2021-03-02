@@ -10,5 +10,4 @@ public class PolimoMain {
 		PolimoSuper polimo2 = new PolimoSub2();
 		polimo2.call();
 	}
-
 }
