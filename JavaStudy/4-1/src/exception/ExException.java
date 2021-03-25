@@ -71,7 +71,7 @@ public class ExException {
 					int n[] = {0, 1, 2};
 
 					for (int i = 0; i < 5; i++){
-					  System.out.println(n[i]);
+						System.out.println(n[i]);
 					}
 
 					break;
@@ -85,7 +85,7 @@ public class ExException {
 				}
 
 			} catch (NullPointerException e) {
-				System.out.println(e);
+				System.out.println( "aaaa" + e);
 			} catch (ArrayIndexOutOfBoundsException e) {
 				System.out.println(e);
 				// 問③: クラスキャストの例外をキャッチしなさい。
@@ -110,9 +110,9 @@ public class ExException {
 	// ここへ記述
 	private static void NPE() throws NullPointerException{
 		String nullpo = null;
-	    if(nullpo == null) {
-	        throw new NullPointerException(CONST_MSG_NULLPO);
-	    }
+		if(nullpo == null) {
+			throw new NullPointerException(CONST_MSG_NULLPO);
+		}
 	}
 	// ここまで記述
 	/**

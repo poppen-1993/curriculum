@@ -7,7 +7,7 @@ public class throwMain {
 
 	public static void main(String args[]) {
 
-		String hogeOffice = null;
+		String hogeOffice = "aaaa";
 
 		try {
 
