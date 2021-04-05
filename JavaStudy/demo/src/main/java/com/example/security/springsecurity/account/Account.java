@@ -9,11 +9,11 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -36,7 +36,7 @@ public class Account implements UserDetails {
 
 	//問１－２ プライマリーキーを設定するアノテーションを記述
 
-	@EmbeddedId
+	@Id
 	@Column(nullable = false, unique = true)
 	private String username;
 

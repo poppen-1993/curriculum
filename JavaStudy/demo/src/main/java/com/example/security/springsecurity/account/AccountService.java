@@ -57,10 +57,10 @@ public class AccountService implements UserDetailsService {
     //管理者を登録するメソッド
     @Transactional
     public void registerManager(String username, String password, String mailAddress) {
-//        Account user = new Account(username, passwordEncoder.encode(password), mailAddress);
-//        user.setManager(true);
-    	Account user = new Account(username, passwordEncoder.encode(password), mailAddress);
-        user.setAdmin(true);
+        Account user = new Account(username, passwordEncoder.encode(password), mailAddress);
+        user.setManager(true);
+//    	Account user = new Account(username, passwordEncoder.encode(password), mailAddress);
+//        user.setAdmin(true);
         repository.save(user);
     }
 
