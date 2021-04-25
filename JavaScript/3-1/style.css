@@ -1,0 +1,27 @@
+.left{
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: all 2s ease;
+}
+
+.right{
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    transition: all 2s ease;
+}
+
+.Left { left: 0; z-index:100;}
+.Right { right: 0; z-index:101;}
+
+.click{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}

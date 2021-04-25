@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>4-1</title>
+</head>
+<body>
+    <div id="app">
+        <div> 残り残タスク数：{{ remainingTask }}/{{ list.length }}</div>
+        <input type="text" v-model="addText" placeholder="ToDo入力して">
+        <button v-on:click="addToDo()">追加</button>
+        <button v-on:click="deleteBtn()">削除</button>
+        <div></div>
+        <a>検索</a>
+        <input type="text" v-model="sreachText"><hr>
+        <div v-if="list.length === 0">現在タスクはありません</div>
+        <!-- v-for="値 in 配列orオブジェクト" -->
+        <ul v-if="sreachText.length !== 0" v-for="todo in filterText">
+            <li>
+                <span v-bind:class="{ done: todo.isChecked }">
+                    <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                </span>
+            </li>
+        </ul>
+        <ul v-if="sreachText.length === 0" v-for="todo in list">
+            <li>
+                <span v-bind:class="{ done: todo.isChecked }">
+                    <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                </span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="main.js"></script>
+</body>
+</html>
